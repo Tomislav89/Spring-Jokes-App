@@ -6,10 +6,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class JokeServiceImpl implements JokeService{
 
+    //DI INJECTED
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public JokeServiceImpl() {
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    public JokeServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
     @Override
